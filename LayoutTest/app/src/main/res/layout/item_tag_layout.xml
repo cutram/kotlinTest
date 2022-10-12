@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="tag"
+            type="com.kotlin.myapplication.uione.model.Tag" />
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/llClickUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_12">
+
+        <ImageView
+            android:id="@+id/imageItemTag"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_24"
+            android:background="@drawable/ic_tag_item" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="@dimen/dp_2"
+            android:text="@{tag.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            tools:text="Home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/sp_14"
+            tools:text="(3)" />
+    </LinearLayout>
+</layout>

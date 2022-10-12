@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kotlin.myapplication.uione.viewModel.MenuViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llAddNewTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner_16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_6">
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:src="@drawable/ic_tag" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/newtag"
+            android:textSize="@dimen/dp_20"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>

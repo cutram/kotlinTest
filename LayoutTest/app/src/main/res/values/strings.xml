@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="newtag">NewTag</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sare">sare</string>
+    <string name="save">save</string>
+    <string name="delete">delete</string>
+    <string name="coppy">coppy</string>
+    <string name="add_tag">Add tag</string>
+    <string name="cancel">cancel</string>
+    <string name="update">update</string>
+    <string name="add">add</string>
+    <string name="monday5september2022">monday 5 september 2022</string>
+    <string name="task">5 task</string>
+    <string name="copy">copy</string>
+</resources>

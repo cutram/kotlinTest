@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="test"
+            type="com.kotlin.myapplication.uione.fragment.AddTagFragment" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_40"
+        app:cardCornerRadius="@dimen/dp_20">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/llDialogAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_12"
+                    android:gravity="center"
+                    android:text="@string/add_tag"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edAddTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_margin="@dimen/dp_12"
+                    android:background="@drawable/bg_corner_13"
+                    android:hint="@string/add_tag"
+                    android:paddingHorizontal="@dimen/dp_12"
+                    android:textSize="@dimen/sp_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_margin="@dimen/dp_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancelDialogAdd"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_marginStart="@dimen/sp_20"
+                        android:layout_marginEnd="@dimen/sp_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_corner_14"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnAddlDialog"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_corner_16"
+                        android:gravity="center"
+                        android:text="@string/add_tag"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                    `
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

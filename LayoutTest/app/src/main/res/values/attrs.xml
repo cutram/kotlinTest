@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="detailColor" format="color" />
+
+    <declare-styleable name="ColorTheme">
+        <attr name="detailColor" />
+        <attr name="primaryAlphaColor" format="color"/>
+        <attr name="primaryBackgroundColor" format="color" />
+        <attr name="secondaryBackgroundColor" format="color" />
+        <attr name="separatorColor" format="color" />
+        <attr name="greenBackground" format="color" />
+        <attr name="lineColor" format="color" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="placeHolderColor" format="color" />
+        <attr name="elevation" format="dimension" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="DateView">
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="detailColor" />
+        <attr name="fontFamily" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kotlin.myapplication.uitwo.viewmodel.UiMainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTask"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_132"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_corner_ui3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="@dimen/dp_105"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_26"
+                    android:text="GoodMorning"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:layout_width="128dp"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@string/monday5september2022"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_10" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:layout_marginBottom="@dimen/dp_25"
+                    android:text="@string/task"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dp_127"
+                android:layout_height="@dimen/dp_89"
+                android:layout_marginStart="@dimen/dp_211"
+                android:layout_marginTop="@dimen/dp_45"
+                android:src="@drawable/imgcat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.462"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clTask">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvShopList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/sp_6"
+                    android:text="Shop list"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:id="@+id/recyclerViewShopList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    app:items="@{viewModel.shopList}" />
+
+                <TextView
+                    android:id="@+id/tvTodoList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/sp_6"
+                    android:text="Todo list"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:id="@+id/recyclerViewTodoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:items="@{viewModel.toDoList}" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appImageAscending"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_31"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/gray"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/chart"
+            app:layout_constraintBottom_toTopOf="@+id/appAdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:padding="@dimen/dp_6"
+            android:id="@+id/appAdd"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/bg_circle"
+            android:elevation="?attr/elevation"
+            android:outlineAmbientShadowColor="@color/gray"
+            android:outlineSpotShadowColor="@color/gray"
+            android:src="@drawable/resource_new"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

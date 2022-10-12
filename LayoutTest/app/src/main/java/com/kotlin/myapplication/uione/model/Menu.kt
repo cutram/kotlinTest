@@ -1,0 +1,1 @@
+package com.kotlin.myapplication.uione.modelimport android.graphics.drawable.Drawabledata class Menu (var image: Drawable)

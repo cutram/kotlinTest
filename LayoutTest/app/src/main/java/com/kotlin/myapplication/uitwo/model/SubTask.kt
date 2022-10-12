@@ -1,0 +1,1 @@
+package com.kotlin.myapplication.uitwo.modelimport android.graphics.drawable.Drawabledata class SubTask (var name: String, var isDone : Boolean = false)

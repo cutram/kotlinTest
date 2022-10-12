@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="todoList"
+            type="com.kotlin.myapplication.uitwo.model.TodoList" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/bg_corner_12"
+        android:backgroundTint="?attr/secondaryBackgroundColor"
+        android:elevation="?attr/elevation"
+        android:padding="@dimen/dp_12">
+
+        <ImageView
+            android:id="@+id/imgPind"
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:src="@drawable/ic_pin_svgrepo_com"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/greenBackground" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/imgPind"
+            tools:layout_editor_absoluteX="dp_16">
+
+            <LinearLayout
+                android:id="@+id/llStatus"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="#5FC65F"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivNotDone"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_circle_rounded"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@null"
+                  />
+
+                <ImageView
+                    android:id="@+id/ivDone"
+                    android:layout_width="@dimen/dp_26"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_4"
+                    android:src="@drawable/ic_tck"
+                     />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_weight="1"
+                android:text="@{todoList.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_19" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginRight="@dimen/dp_6"
+                android:src="@drawable/ic_iconcat" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCpbTask"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:textSize="@dimen/dp_12"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/cpbTask"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_gravity="center"
+        app:cpb_background_progressbar_color="#BAF49C"
+        app:cpb_background_progressbar_width="@dimen/dp_2"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="?attr/greenBackground"
+        app:cpb_progressbar_width="@dimen/dp_4"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSubTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_17"
+                android:layout_marginStart="@dimen/dp_42"
+                android:src="@drawable/ic_sub_task"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubTask"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_17"
+                android:layout_marginStart="@dimen/dp_4"
+                android:gravity="top"
+                android:text="SubTask"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toTopOf="@+id/rvSubTask"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSubTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_62"
+                android:layout_marginTop="8dp"
+                app:items="@{todoList.subTasks}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubTask" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

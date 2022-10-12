@@ -1,0 +1,1 @@
+package com.kotlin.myapplication.uitwo.modeldata class ShopList (var name: String,var isDone : Boolean = false )
